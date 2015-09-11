@@ -1,0 +1,208 @@
+\documentclass[a4paper,11pt]{article}
+
+%A Few Useful Packages
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+%Setup hyperref package, and colors for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\linespread{0.92}
+
+%Page Setup
+\usepackage{verbatim}
+\usepackage{geometry}
+\geometry{top=0.7in, bottom=0.7in, left=0.8in, right=0.8in}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozio? for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\huge Shiyu \textsc{Dong}}
+    \bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%%%%%%%%%%%%% Section: Personal Information %%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.05 in} \section{Personal Information}
+\begin{tabular}{rp{3.4cm}rl}
+    \textsc{Cell Phone:} & +1 (512)927-7817 & \textsc{Address:} & 13630 Via Varra Apt 409, Broomfield, CO 80020\\
+    \textsc{Work Phone:} & +1 (303)247-5116 & \textsc{email:}   & \href{mailto:shiyud@utexas.edu}{shiyud@utexas.edu}
+\end{tabular}
+
+%%%%%%%%%%%%% Section: Objective %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objective}
+Seeking for a full-time Software Development Engineer position starting immediately.
+
+%%%%%%%%%%%%% Section: Work Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+
+% Qualcomm Work
+\textbf{Qualcomm Incorporated}, \emph{Software Engineer} \hfill \textsc{July 2014} - \emph{Present}\vspace{-10pt}\\
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+\small{
+  \item Work in Android Radio Interface Layer (RIL) team, which handles the communication between Android Telephony and Qualcomm modem.
+  \item Responsible for RIL Network Access Service development tasks using C/C++.
+  \item Lead Android Enhancement Multimedia Broadcast Multicast Service development tasks for RIL using C.
+  \item Lead Android Access Terminal Command Forward (ATFwd) App and ATFwd Daemon development tasks using Java and C.
+  \item Develop and maintain a RIL Unit Test Framework (UTF) in C++.
+  \item Design and implement a Python based auto triage tool that can analyze and annotate RIL logs, decode hex messages in log and generate log summaries and call flow diagrams.
+}
+\end{itemize}
+
+% RA
+\begin{comment}
+\textbf{The University of Texas at Austin}, \emph{Graduate Research Assistant} \hfill \textsc{Aug 2013 - Jan 2014}\vspace{-10pt}\\
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+\small{
+  \item Conducted research for the impact of different compiler optimizations on symbolic execution under the supervision of Dr. Sarfraz Khurshid.
+}
+\end{itemize}
+\end{comment}
+
+% Intern
+\textbf{Qualcomm Incorporated}, \emph{Software Engineer Intern} \hfill\textsc{Jun 2013 - Aug 2013}\vspace{-10pt} \\
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+\small{
+  \item Refined UTF logging and implemented a log parser and HTML generator for UTF logs using Perl and Python.
+  \item Optimized UTF framework to make it scalable to large number of test cases and able to take command line arguments.
+  \item Designed a Python based auto test case generation tool that can convert RIL logs into executable UTF test cases.
+}
+\end{itemize}
+
+% TA
+\textbf{The University of Texas at Austin}, \emph{Teaching Assistant} \hfill\textsc{Jan 2013 - May 2014}\vspace{-10pt}\\
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+\small{
+  \item Teaching Assistant for \textit{Requirement Engineering} class taught by Dr. Suzanne Barber (2013) and Dr. Yinle Zhou (2014).
+  \item Gained familiarity in the process of defining, documenting and maintaining software requirements, and different software development life cycle models including traditional waterfall model and agile model.
+}
+\end{itemize}
+
+%%%%%%%%%%%%% Section: Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%&Software Engineering Track
+\section{Education}
+\textbf{The University of Texas at Austin} \hfill\textsc{Aug 2012 - May 2014}\vspace{-10pt}\\
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+\small{
+  \item \emph{M.S.E., Electrical and Computer Engineering} | \textsc{Gpa}: 3.82/4.0
+  \item Thesis: "\href{http://repositories.lib.utexas.edu/bitstream/handle/2152/26000/DONG-THESIS-2014.pdf?sequence=1}{An Empirical Study of the Influence of Compiler Optimizations on Symbolic Execution}" supervised by Dr. Sarfraz Khurshid.
+  \item Corresponding research paper "Studying the Influence of Standard Compiler Optimizations on Symbolic Execution" accepted and to appear on the 26th \emph{IEEE International Symposium on Software Reliability Engineering} (ISSRE) 2015.
+}
+\end{itemize}
+
+%& University of Michigan - Shanghai Jiao Tong University Joint Institute \\
+\textbf{Shanghai Jiao Tong University, Shanghai, China} \hfill\textsc{Sep 2008 - Aug 2012}\vspace{-10pt}\\
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+\small{
+  \item \emph{B.S., Electrical and Computer Engineering} | \textsc{Gpa}: 3.73/4.0
+  \item Thesis: "Motor Control in Endoscopic Probes Based on Infrared Signals" supervised by Dr. Jigang Wu.
+}
+\end{itemize}
+
+\begin{comment}
+%%%%%%%%%%%%% Section: Research Experience %%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Experience}
+\begin{tabular}{p{2.3cm}|p{14cm}}
+  \hfill\textsc{Feb-May 2013} & Halide Compiler for Multicore Processor \\
+  & \small Advisor: Dr. Keshav \textsc{Pingali}\\
+  &\footnotesize{
+  \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+  \item Conduct research of Stencil Compiler and Halide programming language for image processing.
+  \item Build a Halide compiler that can convert Halide language to C language
+  using Python, with support of loop optimization, parallelization and vectorization.
+  \item Evaluate the performance and analysis the difference between our implementation and the original Halide compiler.
+\end{itemize} \vspace{-10pt}
+}\\\multicolumn{2}{c}{} \vspace{-0.1 in} \\
+ \hfill\textsc{Sep-Dec 2012} & Implementing Iterative Context Bounding in Java PathFinder (JPF) \\ 
+ & \small Advisor: Dr. Sarfraz \textsc{Khurshid}\\
+ &\footnotesize{
+  \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+   \item Study the basic usage JPF and understand iterative context bounding algorithm.
+   \item Implement iterative context bounding in JPF 6.0. Resolve the state matching problem and perform depth bound optimization.
+   \item Compare the performance with and without iterative context bounding algorithm against different benchmarks and analysis the result.
+  \end{itemize} \vspace{-10pt}   
+ }\\\multicolumn{2}{c}{} \vspace{-0.1 in} \\
+\hfill\textsc{Sep-Dec 2011} & Motor Control in Endoscopic Probes Based on Infrared Signals \\
+& \small Advisor: Dr. Jigang \textsc{Wu}\\
+&\footnotesize{
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+   \item Develop a motor control system for endoscope using infrared signal as medium.
+   \item Design circuits based on a micro processor to process the signals and control the motor.
+   \item Build a PHP web server. Establish the database. Use Java-Script and html to realize the web client page. Accomplish the control of the IR transmitting using the Wi-Fi based web server, and finally succeed in controlling the whole system.
+  \end{itemize} \vspace{-10pt}
+ }\\\multicolumn{2}{c}{} \vspace{-0.1 in} \\
+ \hfill\textsc{Apr-Oct 2011} & Novel Integration Schemes for Multi-body Systems \\
+& \small Advisor: Dr. Olivier \textsc{Bauchau}\\
+&\footnotesize{
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=*]\vspace{-5pt}
+   \item Study related concepts in multi-body dynamics and Lie Algebra.
+   \item Study the Generalized-\begin{math}\alpha \end{math} method and classical method for solving 3D solid body motions.
+   \item Develop software to perform convergence analysis of the energy-preserving integration scheme and appreciated the simplicity and high efficiency of this scheme.
+   \item Publish paper {\it Intrinsic Time Integration Procedures for Rigid Body Dynamics} in {\it ASME Journal of Computational and Nonlinear Dynamics, 2011}.
+  \end{itemize} \vspace{-10pt}
+ }\\\multicolumn{2}{c}{} \vspace{-0.1 in} \\
+\end{tabular}
+\end{comment}
+
+%Section: Knowledge and Skill Set
+\section{Knowledge and Skill Set}
+Solid foundation in data structures, algorithms, object oriented programming,
+\textsc{Linux} environment programming, software testing, \textsc{Unix} system,
+GNU tool chain and version control tools. Good understanding in operating
+system, computer architecture, compiler (both front end and back end), software
+engineering concept and requirement engineering concept.  Basic understanding
+in computer networks.
+
+%Section: Programming Languages
+\section{Programming Languages}
+\begin{tabular}{rl}
+Fluent:& \textsc{c++}, \textsc{c}\\
+Intermediate Knowledge:& \textsc{java}, \textsc{python}, \textsc{shell script}, \textsc{Matlab}, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+Basic Knowledge: & \textsc{perl}, \textsc{html}, \textsc{java-script},
+\textsc{junit}, \textsc{VHDL}, \textsc{Alloy},
+\textsc{Assembly}\\
+\end{tabular}
+
+\end{document}
